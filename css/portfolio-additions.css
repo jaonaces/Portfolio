@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════════════
+   ADD THESE STYLES TO THE BOTTOM OF portfolio.css
+   EmailJS Alert Styles + chip-icon fix
+═══════════════════════════════════════════════════ */
+
+/* ── Skill chip icons (img + devicon + bi) ── */
+.chip-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    flex-shrink: 0;
+    font-size: 1.1rem;   /* for icon fonts */
+}
+
+/* ── EmailJS Alert Box ── */
+.alert-custom {
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.2rem;
+    font-size: .9rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: .4rem;
+    animation: alertSlideIn .35s ease both;
+}
+
+@keyframes alertSlideIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.alert-custom.success {
+    background : rgba(0, 255, 136, 0.10);
+    border     : 1px solid rgba(0, 255, 136, 0.30);
+    color      : var(--accent);           /* green */
+}
+
+.alert-custom.success a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.alert-custom.error {
+    background : rgba(255, 95, 87, 0.10);
+    border     : 1px solid rgba(255, 95, 87, 0.30);
+    color      : #ff5f57;                  /* red */
+}
+
+.alert-custom.error a {
+    color: #ff5f57;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ── Submit button spinner alignment ── */
+#submitBtn .spinner-border {
+    vertical-align: middle;
+}
+
+/* ── Contact info val hover ── */
+a.contact-info-val:hover {
+    color: var(--accent);
+    transition: color .3s;
+}
